@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロフィール</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f5f6fa;
+            --text-color: #2c3e50;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid var(--accent-color);
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-title {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-bio {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: var(--card-bg);
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-button:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .social-button i {
+            margin-right: 10px;
+        }
+
+        .skills-section {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-button {
+            表示: ブロック;
+            幅: 百%;
+            パディング: 1レム;
+            背景: ヴァール(ーーアクセントカラー);
+            色: ホワイト;
+            テキスト調整: センター;
+            テキスト装飾: なし;
+            border-radius: 8px を;
+            フォントウェイト: 大胆;
+            移行: すべて 0。3s 容易;
+        }
+
+        .contact-ボタン:ホバー {
+            背景: #2980b9;
+            トランスフォーム: 翻訳してください(ー2 ですpx を);
+        }
+    </スタイル>
+</頭>
+<体>
+    <ディヴ クラス=「コンテナ」 を>
+        <ヘッダー クラス=「profile-header」です>
+            <img src="https://placehold。co/150x150"" アルト="ched LEFNUィーー RUCHOUN MIGHT" です クラス=「profile-image」です>
+            <h1 クラス=「プロフィール名」>山田 太朗</h1>
+            <p クラス=「profile-title」です>臧 ウェルハト っ っ て ん っ て ん っ て ん ん ん ん んん ん んん ん んん んん んん んん んんん ん んんん</p>
+        </ヘッダー>
+
+        <セクション クラス=「profile-bio」です>
+            <p>
+ 瀹ツヅル皮ヲシミ合アリザレダシ、ユールールーリヲシミリーナウゼェアチョンリケールーシノナイナニ情ヲシメイヲシメイデデイイマス。
+ 5 年、上之（うえの）卯（う）卯（う）卯（う）卯（う）の 卯（う）卯（う）の 卯（う）卯（う）の 卯（う）卯（う）の 卯（う）卯（う）の 卯（う）卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 卯（う）の 
+            </p>
+        </セクション>
+
+        <セクション クラス=「ソーシャルリンク」>
+            <a href=" #" の クラス=「social-button」です>
+                <i クラス=「fab fa-github」です></i>
+                GitHub
+            </a>
+            <a href="#" class="social-button">
+                <i class="fab fa-twitter"></i>
+                Twitter
+            </a>
+            <a href="#" class="social-button">
+                <i class="fab fa-linkedin"></i>
+                LinkedIn
+            </a>
+        </section>
+
+        <section class="skills-section">
+            <h2>スキル</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-node"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+            </div>
+        </section>
+
+        <a href="mailto:contact@example.com" class="contact-button">
+            <i class="fas fa-envelope"></i>
+            お問い合わせ
+        </a>
+    </div>
+</body>
+</html>
