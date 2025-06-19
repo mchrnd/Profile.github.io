@@ -232,13 +232,13 @@
             }
         }
 
-        .image-card-desc {
-            color: #2c3e50;
-            font-size: 1rem;
+        .accordion-content .image-card-desc {
+            color: #8a99a6;
+            font-size: 0.75rem;
+            font-weight: 400;
             margin-bottom: 1em;
             text-align: center;
-            letter-spacing: 0.02em;
-            font-weight: 400;
+            letter-spacing: 0.01em;
         }
 
         .id-highlight {
@@ -246,6 +246,54 @@
             border-radius: 6px;
             padding: 0.1em 0.3em;
             color: #2980b9;
+        }
+
+        .accordion-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-top: 1.2rem;
+            padding: 0;
+            overflow: hidden;
+        }
+        .accordion-toggle {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+            padding: 1rem 1.2rem;
+            cursor: pointer;
+            outline: none;
+            transition: background 0.2s, color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eaf6fb;
+        }
+        .accordion-toggle:hover, .accordion-toggle.active {
+            background: #f4f8fb;
+            color: #3498db;
+        }
+        .accordion-icon {
+            font-size: 1.1em;
+            margin-left: 0.5em;
+            transition: transform 0.3s;
+        }
+        .accordion-toggle.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0.4,0,0.2,1);
+            padding: 0 1.2rem;
+        }
+        .accordion-content.open {
+            padding: 1rem 1.2rem 1.2rem 1.2rem;
+            max-height: 600px;
         }
     </style>
 </head>
@@ -269,6 +317,22 @@
             <a href="mailto:contact@example.com" class="contact-button">
                 <i class="fas fa-envelope"></i> お問い合わせ
             </a>
+            <div class="accordion-card">
+                <button class="accordion-toggle" id="accordion-toggle">
+                    リバリバID
+                    <span class="accordion-icon" id="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content" id="accordion-content">
+                    <p class="image-card-desc">リバリバフレンド募集中です～ぜひ相互で♡<br>画像を押すとIDコピーできます～</p>
+                    <img
+                        id="copy-image"
+                        src="https://placehold.co/2712x1220"
+                        alt="コピー用画像"
+                        class="responsive-image"
+                        style="cursor:pointer;"
+                    >
+                </div>
+            </div>
         </div>
         <div class="profile-main">
             <section class="card-block">
@@ -289,16 +353,6 @@
             <section class="card-block">
                 <h3>趣味</h3>
                 <p>休日はカフェ巡りや読書、写真撮影を楽しんでいます。新しい技術やデザインにも興味があります。</p>
-            </section>
-            <section class="card-block">
-                <p class="image-card-desc">リバリバフレンド募集中です～ぜひ相互で♡<br>画像を押すとIDコピーできます～</p>
-                <img
-                    id="copy-image"
-                    src="https://placehold.co/2712x1220"
-                    alt="コピー用画像"
-                    class="responsive-image"
-                    style="cursor:pointer;"
-                >
             </section>
         </div>
     </div>
@@ -323,5 +377,13 @@ document.getElementById('font-decrease').onclick = () => {
         html.style.fontSize = baseFontSize + 'px';
     }
 };
+const accToggle = document.getElementById('accordion-toggle');
+const accContent = document.getElementById('accordion-content');
+const accIcon = document.getElementById('accordion-icon');
+accToggle.addEventListener('click', function() {
+    accContent.classList.toggle('open');
+    accToggle.classList.toggle('active');
+    accIcon.textContent = accContent.classList.contains('open') ? '▲' : '▼';
+});
 </script>
 </html>
