@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プロフィール</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --base-bg: #e0d7c1;
-            --card-bg: #e2dcd2;
-            --main-color: #414a8e;
-            --sub-color: #a29cb6;
-            --text-color: #222;
-            --subtext-color: #7c7c7c;
+            --base-bg: #f6f7f8;
+            --card-bg: #ffffff;
+            --main-color: #272343;
+            --sub-color: #b4b4b4;
+            --text-color: #2d334a;
+            --subtext-color: #b4b4b4;
+            --accent-color: #ffd803;
+            --accent-hover: #e3b900;
             --border-radius: 14px;
-            --shadow: 0 2px 8px rgba(65,74,142,0.06);
+            --shadow: 0 2px 8px rgba(39,35,67,0.06);
         }
 
         * {
@@ -24,7 +29,7 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'M PLUS 1p', 'Helvetica Neue', Arial, sans-serif;
             background: var(--base-bg);
             color: var(--text-color);
             line-height: 1.7;
@@ -130,7 +135,7 @@
             align-items: center;
             justify-content: center;
             padding: 0.5rem 0.9rem;
-            background: var(--sub-color);
+            background: var(--accent-color);
             border: 1px solid var(--main-color);
             border-radius: 6px;
             color: var(--main-color);
@@ -144,7 +149,7 @@
         }
 
         .social-button:hover {
-            background: var(--main-color);
+            background: var(--accent-hover);
             color: #fff;
         }
 
@@ -275,12 +280,11 @@
     <div class="container">
         <div class="profile-sidebar">
             <header class="profile-header">
-                <img src="https://placehold.co/150x150" alt="プロフィール画像" class="profile-image">
+                <!-- <img src="https://placehold.co/150x150" alt="プロフィール画像" class="profile-image"> -->
                 <h1 class="profile-name">儿茶</h1>
-                <p class="profile-title">リバリバのアカウント</p>
+                <p class="profile-title"></p>
             </header>
             <div class="social-links">
-                <a href="#" class="social-button"><i class="fab fa-github"></i>GitHub</a>
                 <a href="#" class="social-button"><i class="fa-brands fa-x-twitter"></i>@errrrcha</a>
             </div>
             <div class="accordion-card">
@@ -289,7 +293,7 @@
                     <span class="accordion-icon" id="accordion-icon">▼</span>
                 </button>
                 <div class="accordion-content" id="accordion-content">
-                    <p class="image-card-desc">フレンド募集中です～ぜひ相互で♡<br>画像を押すとIDコピーできます</p>
+                    <p class="image-card-desc">フレンド募集中です～ぜひ相互で♡<br>671-541-317 画像を押してコピー◯</p>
                     <img
                         id="copy-image"
                         src="https://raw.githubusercontent.com/mchrnd/Profile.github.io/refs/heads/main/images/prf20250619.jpg"
@@ -302,16 +306,18 @@
         </div>
         <div class="profile-main">
             <section class="card-block">
-                <h2>自己紹介</h2>
-                <p>あ<br>3L特に地雷なし。今のところRRはCPとして自分から発信することはあまりないです。関係性萌えしてます。<br>あと白衣が好きです。</p>
+                <h2>about</h2>
+                <p>3L特に地雷なし。大体は関係性萌えしていることが多いです。<br>あと白衣と白のロングコートが好きです。</p>
             </section>
             <section class="card-block">
                 <h3>リバxリバ</h3>
-                <p>レアリザスさん　萌　好<br>アクシオンゲートを贔屓しつつ、プロブレムちゃんもすきです。<br>ストーリーおもしろ～！ゲーム楽し～！って感じでエンジョイプレイ中です。ハフバから始めました。
+                <p>レアリザスさん　萌　好　メロ<br>
+                    アクシオンゲートを贔屓しつつ、プロブレムちゃんもすきです。<br>
+                    ストーリーおもしろ～！ゲーム楽し～！って感じでエンジョイプレイ中です。まだまだ勉強中です。
                 </p>
             </section>
             <section class="skills-section">
-                <h2>ほか好きなの</h2>
+                <h2>ほかゲームと好きなの</h2>
                 <div class="skills-grid">
                     <div class="skill-item"><span>あんスタ</span></div>
                     <div class="skill-item"><span>原神</span></div>
