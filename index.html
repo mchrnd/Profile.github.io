@@ -283,6 +283,39 @@
             border-radius: 0.2em;
             padding: 0 0.1em 0.2em 0.1em;
         }
+
+        .copy-image-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .copy-image-label {
+            position: absolute;
+            left: 50%;
+            top: 14px;
+            transform: translateX(-50%);
+            background: rgba(39,35,67,0.32);
+            color: rgba(255,255,255,0.82);
+            padding: 0.18em 0.8em;
+            border-radius: 14px;
+            font-size: clamp(0.68rem, 2.5vw, 0.98rem);
+            font-weight: 500;
+            box-shadow: 0 1px 6px rgba(39,35,67,0.08);
+            pointer-events: none;
+            letter-spacing: 0.04em;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            white-space: nowrap;
+            opacity: 0.90;
+            transition: font-size 0.2s, background 0.2s;
+        }
+        @media (max-width: 900px) {
+            .copy-image-label {
+                font-size: clamp(0.62rem, 2.8vw, 0.88rem);
+                padding: 0.13em 0.5em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -307,14 +340,19 @@
                     <span class="accordion-icon" id="accordion-icon">▼</span>
                 </button>
                 <div class="accordion-content" id="accordion-content">
-                    <p class="image-card-desc">フレンド募集中です～ぜひ相互で♡<br>671-541-317 画像を押してコピー◯</p>
-                    <img
-                        id="copy-image"
-                        src="https://private-user-images.githubusercontent.com/150801780/458852672-30b3b586-4e41-4b0f-869d-b65751552ec2.png"
-                        alt="コピー用画像"
-                        class="responsive-image"
-                        style="cursor:pointer;"
-                    >
+                    <div class="copy-image-wrapper">
+                        <p class="image-card-desc">フレンド募集中です～（671-541-317）</p>
+                        <div style="position:relative;">
+                            <span class="copy-image-label">画像を押してIDコピー◯</span>
+                            <img
+                                id="copy-image"
+                                src="https://private-user-images.githubusercontent.com/150801780/462925258-fca10d05-9d52-45d5-a574-1ab12fa9635d.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTE4MTExODYsIm5iZiI6MTc1MTgxMDg4NiwicGF0aCI6Ii8xNTA4MDE3ODAvNDYyOTI1MjU4LWZjYTEwZDA1LTlkNTItNDVkNS1hNTc0LTFhYjEyZmE5NjM1ZC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcwNlQxNDA4MDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mMzM0NjQ1YTBkZTdjYjU5MTc4MWViNzJiMjdiYjIwNjNmZGEyOTZjMmRkNWU4ZjJkNzBhNWNmNTNhOWZiMWZiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.kCcRNohKAgeHx5F7O3-lvE-NLrE_NjuHfJfq5Puy24I"
+                                alt="コピー用画像"
+                                class="responsive-image"
+                                style="cursor:pointer;"
+                            >
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
